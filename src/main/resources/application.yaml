@@ -12,14 +12,15 @@ spring:
       path: /h2-console
   datasource:
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:~/test
-    username: sa
+    url: jdbc:h2:mem:test
+    username: user
     password:
   jpa:
     hibernate:
       ddl-auto: create-drop
     show-sql: true
     generate-ddl: true
+    defer-datasource-initialization: true
 
 eureka:
   instance:
